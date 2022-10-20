@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark navbar-expand-sm">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a routerLink="courses">HOME</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item"><a routerLink="courses">ABOUT</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item"><a routerLink="courses">COURSES</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="nav-item"><a routerLink="login">LOG OUT</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </ul>
+</nav>
+<br>
+<div class="container" style="width:650px">
+    <h1 id="header-section"> Add Course</h1>
+    <br>
+    <!-- angular property binding [property] -->
+    <form [formGroup]="addCourseForm">
+        <div>
+            <div class="form-group">
+                <label for="courseName">Course Name :</label>
+                <input type="text" id="courseName" name="courseName" placeholder="Enter Name" class="form-control"  formControlName="courseName"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="courseAuthorName">Course Author Name :</label>
+                <input type="text" id="courseAuthorName" name="courseAuthorName" placeholder="Enter Author Name" class="form-control"  formControlName="courseAuthorName"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDuration">Course Duration (hours) :</label>
+                <input type="number" id="courseDuration" name="courseDuration" placeholder="Enter Duration in hours. Ex: 10" class="form-control" formControlName="courseDuration"><br>
+            </div>
+
+            <div class="form-group">
+                <label for="courseStatus">Course Availability :</label>
+                <input type="text" id="courseStatus" name="courseStatus" placeholder="Enter Availability" class="form-control"  formControlName="courseStatus"><br>
+            </div>
+        </div>
+
+        <!-- event binding (event) -->
+        <button (click)="gotoCourse()" class="btn btn-info">go back</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="saveCourse()" class="btn btn-success">Save course</button>
+    </form>
+    <br>
+</div>

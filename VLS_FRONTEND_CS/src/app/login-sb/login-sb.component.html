@@ -1,0 +1,29 @@
+<body>
+    <div class="container">
+      <h1 id="header-section"> LOGIN FORM</h1> <br>
+      <form [formGroup]="loginForm" (ngSubmit)="submitData()">
+        
+        <div class="form-group">
+          <label for="loginId">USER ID</label>
+          <input type="text" id="loginId" class="form-control" placeholder="Enter USER ID" formControlName="loginId">
+          <!-- <div *ngIf="loginId.invalid && (loginId.touched||loginId.dirty)">
+            <span class="error" *ngIf="loginId.errors?.required">*USER ID is required.</span>
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">PASSWORD</label>
+          <input type="password" id="loginPassword" class="form-control" placeholder="Enter password" formControlName="loginPassword">
+          <!-- <div *ngIf="loginPassword.invalid && (loginPassword.touched||loginPassword.dirty)">
+            <span class="error" *ngIf="loginPassword.errors?.required">*Password is required.</span>
+          </div> -->
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-info" type="submit" [disabled]="loginForm.invalid">LOGIN</button>
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="submit" (click)="gotoEmpList()" class="btn btn-info" formnovalidate>CANCEL</button> -->
+        </div>
+      </form>
+    </div>
+  </body>

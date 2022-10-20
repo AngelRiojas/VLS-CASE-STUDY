@@ -1,0 +1,42 @@
+/* input[type=text],[type=number] {
+    width:250px;
+} */
+.container {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#header-section {
+    text-align: justify;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+label {
+    font: bold larger black;
+}
+
+nav {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    height: 60px;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+nav a{
+    height: 50px;
+    color: black;
+    font-size: 18px;
+}
+
+nav a:hover{
+    box-shadow: inset -4px -4px 7px #ffffffb0, 
+    inset 4px 4px 5px rgba(94, 104, 121, 0.692);
+    transition:0.4s;
+}

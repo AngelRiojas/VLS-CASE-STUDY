@@ -1,0 +1,38 @@
+DROP DATABASE VLSDB;
+CREATE DATABASE VLSDB;
+USE VLSDB;
+
+CREATE TABLE LOGIN(
+                      LOGIN_ID VARCHAR(10) UNIQUE NOT NULL,
+                      LOGIN_PASSWORD VARCHAR(20) NOT NULL,
+                      PRIMARY KEY(LOGIN_ID)
+);
+
+SELECT * FROM LOGIN;
+INSERT INTO LOGIN VALUES('101', 'PASSWORD101');
+INSERT INTO LOGIN VALUES('102', 'PASSWORD102');
+INSERT INTO LOGIN VALUES('103', 'PASSWORD103');
+
+
+CREATE TABLE COURSE(
+                       COURSE_ID INT UNIQUE NOT NULL,
+                       COURSE_NAME VARCHAR(40) NOT NULL,
+                       COURSE_AUTHOR_NAME VARCHAR(30) NOT NULL,
+                       COURSE_DURATION INT NOT NULL,
+                       COURSE_STATUS VARCHAR(20) NOT NULL,  -- AVAILABILITY
+                       PRIMARY KEY(COURSE_ID)
+);
+
+SELECT * FROM COURSE;
+INSERT INTO COURSE VALUES(101, 'COURSE1', 'ANGEL', 10, 'AVAILABLE');
+
+
+
+SELECT * FROM hibernate_sequence;
+DESC hibernate_sequence;
+
+
+
+DELETE FROM hibernate_sequence;
+INSERT INTO hibernate_sequence VALUES(1);
+UPDATE hibernate_sequence SET next_val = 5;

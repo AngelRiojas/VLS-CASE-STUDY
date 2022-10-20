@@ -1,0 +1,48 @@
+<nav class="navbar navbar-dark navbar-expand-sm">
+  <ul class="navbar-nav">
+    <li class="nav-item"><a routerLink="courses">HOME</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item"><a routerLink="courses">ABOUT</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item"><a routerLink="courses">COURSES</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <li class="nav-item"><a routerLink="login">LOG OUT</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </ul>
+</nav>
+<br>
+<div class="container"> <br>
+    <h1 id="header-section">{{section}}</h1>
+    <br>
+    <table class="table tableSort">
+      <thead>
+        <tr class="table-danger">
+          <th class="thSort">Course ID</th>
+          <th class="thSort">Course Name</th>
+          <th class="thSort">Author Name</th>
+          <th class="thSort">Duration</th>
+          <th class="thSort">Availability</th>
+          <th class="thSort">Delete?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- for loop -->
+        <tr  *ngFor ="let course of courses" class="table-info">
+          <td>{{course.courseId}}</td>
+          <td>{{course.courseName}}</td>
+          <td>{{course.courseAuthorName}}</td>
+          <td>{{course.courseDuration}}</td>
+          <td>{{course.courseStatus}}</td>
+          <td><button (click)="DeleteCourse(course)" class="btn btn-danger">Delete Course</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btn-section">
+      <table class="tableBtnSection">
+        <tr>
+          <td id="btnBackField">
+            <button type="button" class="btn btn-info" VALUE="Back" (click)="gotoLogin()">Go Back</button>
+          </td>
+          <td id="btnNewApp">
+            <button (click)="gotoAddCourse()" class="btn btn-success">Add Course</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>  

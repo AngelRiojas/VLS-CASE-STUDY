@@ -1,0 +1,31 @@
+.container{
+    margin-top: 50px;
+    background-color: #e3f2fd;
+    height: 600px;
+    width: 700px;
+    border:2px solid black;
+}
+
+body{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+#header-section {
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+button{
+    width: 100%;
+    box-shadow: -4px -4px 7px #fffdfdb7,
+                  3px 3px 5px rgba(94, 104, 121, 0.388); 
+}
+
+button:hover{
+    box-shadow: inset -3px -3px 7px #ffffffb0, 
+          inset 3px 3px 5px rgba(94, 104, 121, 0.692);
+} 
